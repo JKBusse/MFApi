@@ -214,4 +214,4 @@ def generate_api_key(length=32):
     return api_key
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0', port=9000)
+    app.run(debug=False, host='0.0.0.0', port=8000)
