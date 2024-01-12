@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='logo.ico') }}" type="image/x-icon">
+    <title>404 Seite nicht gefunden</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+        </div>
+        <h1>MFA API</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/">Startseite</a></li>
+            <li><a href="/abfrageStart">Abfrage</a></li>
+            <li><a href="/apiDoku">API Dokumentation</a></li>
+            <li><a href="/about">Über uns</a></li>
+            <!-- Füge hier weitere Navigationslinks hinzu -->
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h1>API Anfrage Fehlgeschalgen!</h1>
+            <p>{{ errorString }} <a href="/">Zurück zur Startseite</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Dein Unternehmen. Alle Rechte vorbehalten.</p>
+    </footer>
+</body>
+</html>

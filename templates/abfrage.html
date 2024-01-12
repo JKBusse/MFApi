@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='logo.ico') }}" type="image/x-icon">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+        </div>
+        <h1>MFA API</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/">Startseite</a></li>
+            <li><a href="/abfrageStart">Abfrage</a></li>
+            <li><a href="/apiDoku">API Dokumentation</a></li>
+            <li><a href="/about">Über uns</a></li>
+            <!-- Füge hier weitere Navigationslinks hinzu -->
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Abfrageergebnis für {{ VIN }}:</h2>
+            <table>
+              <tr>
+                <td>VIN: </td>
+                <td>{{ VIN }}</td> 
+              </tr>
+              <tr>
+                <td>Marke: </td>
+                <td>{{ brand }}</td> 
+              </tr>
+                <tr>
+                <td>Model: </td>
+                <td>{{ model }}</td> 
+              </tr>
+                <tr>
+                <td>Modeljahr: </td>
+                <td>{{ modelYear }}</td> 
+              </tr>
+                <tr>
+                <td>Farbe: </td>
+                <td>{{ color }}</td> 
+              </tr>
+                <tr>
+                <td>Motorkennbuchstabe: </td>
+                <td>{{ engineCode }}</td> 
+              </tr>
+                <tr>
+                <td>Kraftstoffart: </td>
+                <td>{{ fuelType }}</td> 
+              </tr>
+                <tr>
+                <td>Akt. Tankinhalt: </td>
+                <td>{{ fuelLevel }}l</td> 
+              </tr>
+                <tr>
+                <td>Restreichweite: </td>
+                <td>{{ range }}km</td> 
+              </tr>
+                <tr>
+                <td>Aussentemperatur: </td>
+                <td>{{ outsideTemperature }}°C</td> 
+              </tr>
+                <tr>
+                <td>Verbrauch: </td>
+                <td>{{ fuelConsumption }}l/100km</td> 
+              </tr>
+                
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Dein Unternehmen. Alle Rechte vorbehalten.</p>
+    </footer>
+</body>
+</html>
